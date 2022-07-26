@@ -2,3 +2,12 @@
     background-color: chocolate;
 }
 
+li:hover{
+   color:  green;
+   transition:border-bottonm 0.5s ease-out;
+      
+}
+
+
+
+

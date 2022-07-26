@@ -3,10 +3,10 @@ import fram from '../../../images/logos/Frame.png'
 const Banner = () => {
   return (
     <div>
-   <div class="hero min-h-screen shrink-0">
+   <div class="hero min-h-screen shrink-0 mt-16">
   <div class="hero-content flex-col lg:flex-row-reverse gap-32">
-    <img src={fram} class="max-w-lg  rounded-lg" />
-    <div className=''>
+    <img src={fram} class=" w-[586px] rounded-lg" />
+    <div className='mb-20'>
       <h1 class="text-5xl font-bold">Let’s Grow Your <br/>
          Brand To The <br/>
          Next Level</h1>
