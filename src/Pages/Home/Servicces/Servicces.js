@@ -13,9 +13,9 @@ const Servicces = () => {
 
   return (
     <div>
-      <div className='mt-32'><p className='text-3xl text-center font-bold'>Provide awesome <span className='text-secondary'> services</span> </p></div>
+      <div className='mt-32'><p className=' text-xl lg:text-3xl text-center font-bold'>Provide awesome <span className='work-color'> services</span> </p></div>
 
-      <div className='grid sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3  gap-5  mt-3'>
+      <div className='flex  justify-center   flex-col  lg:flex-row w-full mt-3'>
 
            {
             services?.map(service=><Service key={service.id}  service={service} ></Service>)

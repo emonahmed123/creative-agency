@@ -3,6 +3,7 @@ import Uber from './Uber/Uber'
 import Fristpart from './Fristpart/Fristpart'
 import Servicces from './Servicces/Servicces'
 import Work from './Work/Work'
+import Clients from './ClientFeadback/Clients'
 const Home=()=>{
 
  return(
@@ -11,6 +12,8 @@ const Home=()=>{
       <Uber></Uber>
       <Servicces></Servicces>
        <Work></Work>
+
+       <Clients></Clients>
      </div>
 
 
