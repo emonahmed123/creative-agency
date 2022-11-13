@@ -4,8 +4,8 @@ import Banner from '../Banner/Banner'
 import './Fristpart.css'
 const Fristpart = () => {
   return (
-    <div className='bg bg-red-400 Home'>
-      <Navbar></Navbar>
+    <div className='FristCar Home Color  '>
+     <Navbar></Navbar>
       <Banner></Banner>
 
     </div>

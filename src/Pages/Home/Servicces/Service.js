@@ -3,9 +3,9 @@ import './Service'
 function Service({service}) {
   const {name,img,id,discription}=service
     return (
-    <div className='mb-10 sm:ml-0 md:ml-[10rem] lg:ml-0 '> 
+     
       
-       <div className=' w-[340px] lg:w-[385px] h-auto mt-11  ml-[16px]  pb-10 pt-4 hover:shadow-lg '>
+       <div className=' w-full  h-auto mt-11   pb-10 pt-4 hover:shadow-lg  '>
         <div>
 
         <div className='flex justify-center'>
@@ -14,8 +14,8 @@ function Service({service}) {
          </div>
             
            <div className='p-8'>
-            <h1 className='text-center text-xl lg:text-3xl font-bold'>{name}</h1>
-            <p className='text pt-2 text-center'>{discription}</p>
+            <h1 className='text-center text-xl  md:text-xl lg:text-2xl font-bold'>{name}</h1>
+            <p className='text pt-2 text-sm  text-center'>{discription}</p>
            </div>
 
 
@@ -27,7 +27,7 @@ function Service({service}) {
        
 
 
-    </div>
+    
   )
 }
 

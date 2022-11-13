@@ -1,4 +1,16 @@
 .Home{
     clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 100%);
+    min-height: 100vh;
+}
 
+.Color{
+    background-color: #FBD062;
+}
+
+
+@media (min-width:1024px)and (max-width:1260px) {
+    .Home{
+        clip-path: polygon(0 0, 100% 0%, 100% 83%, 0% 100%);
+        min-height:80vh;
+    }
 }

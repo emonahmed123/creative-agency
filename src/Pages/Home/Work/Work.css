@@ -1,10 +1,12 @@
-.work{
-  width: 100%;
-  height: 720px;
-  background-color:#111430;
-  background-size: cover;
+.carousel-section{
+  margin-top: 70px;
+  padding: 60px;
+  background-color: #111430;
+  color: #fff;
+  height: 500px;
 }
 
-.work-color{
-    color:#7AB259 ;
+.carousel-Sections-item img{
+  width: 100%;
+  height: 200px;
 }

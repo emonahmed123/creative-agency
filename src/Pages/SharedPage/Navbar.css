@@ -1,11 +1,12 @@
 .navBar{
-    background-color: chocolate;
+    background-color:#FBD062;
 }
 
 li:hover{
    color:  green;
    transition:border-bottonm 0.5s ease-out;
-      
+    border-bottom: 1px solid green; 
+    margin-bottom: 0;
 }
 
 
