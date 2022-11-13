@@ -3,7 +3,7 @@ import Foooter from '../../SharedPage/foooter';
 import './Contact';
 const Contact = () => {
     return (
-       <section className="contact h-100vh  md:h-[570px] bg-[#FBD062]"  >
+       <section className="contact h-100vh  md:h-[570px] bg-[#FBD062] " id='contain' >
            <div className="container w-full  flex flex-col md:flex-row  ">
               
                     <div className="w-2/5 mt-28  ml-32">

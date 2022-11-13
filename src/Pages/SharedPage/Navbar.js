@@ -1,7 +1,8 @@
 import React from 'react'
 import './Navbar.css'
 import log from '../../images/logos/logo.png'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import { HashLink as Link } from "react-router-hash-link";
 import { signOut } from 'firebase/auth';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -15,9 +16,12 @@ const Navbar = () => {
     const menu=<>
        
         <li className='text-sm pt-2 '><Link to='/'>Home</Link></li> 
-        <li className='text-sm pt-2 '><Link to=''>Our Team</Link></li> 
-        <li className='text-sm pt-2 '><Link to=''>Our Portfolio</Link></li> 
-        <li className='text-sm pt-2 '><Link to> Contact us</Link></li> 
+        <li className='text-sm pt-2 '><Link to='/lj'>Our Team</Link></li> 
+        <li className='text-sm pt-2 '><Link to='/kl'>Our Portfolio</Link></li> 
+        <li className='text-sm pt-2 '><Link smooth to='/home#contain'> Contact us</Link></li> 
+        {
+        user && <li className='text-sm pt-2'><Link  to='/dashboard'>Dashboard</Link></li>
+      }
         <li className='w-32 h-10 litext  md:pl-[2.5rem] md:pt-[0.5rem] ml-2  bg-black text-white rounded'>{user ?  <button onClick={logout}> Singout </button> : <Link  to ='/login'>Login</Link>}</li> 
 
         </>

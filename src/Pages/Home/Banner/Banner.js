@@ -1,4 +1,5 @@
 import React from 'react'
+import { HashLink as Link } from "react-router-hash-link";
 import fram from '../../../images/logos/Frame.png'
 const Banner = () => {
   return (
@@ -11,7 +12,7 @@ const Banner = () => {
          Brand To The <br/>
          Next Level</h1>
       <p class="py-6">Lorem ipsum dolor sit amet, consectetur<br/> adipiscing elit. Purus commodo ipsum duis <br/> laoreet maecenas. Feugiat </p>
-      <button className="btn btn-active w-40 h-11">Hire Us</button>
+      <Link smooth to='/home#contain' className="btn btn-active w-40 h-11">Hire Us</Link>
 
     </div>
   </div>
