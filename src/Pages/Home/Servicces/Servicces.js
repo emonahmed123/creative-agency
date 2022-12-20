@@ -1,16 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { useProduct } from '../../../Context/Productsprovider';
+
 import Service from './Service';
 
 const Servicces = () => {
-  const [services, setServices] = useState();
+  const {services,setServices}=useProduct()
 
-  useEffect(() => {
-
-    fetch('/Serviec.json')
-      .then(res => res.json())
-      .then(data => setServices(data))
-  }, [])
-
+  
   return (
     <div className='w-full'>
     <p className=' text-xl lg:text-3xl text-center font-bold'>Provide awesome <span className='work-color'> services</span> </p>

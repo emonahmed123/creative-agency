@@ -9,7 +9,7 @@ import Contact from './Contact/Contact'
 const Home=()=>{
 
  return(
-     <div>
+     <div className='bg-white text-black'>
       <Fristpart></Fristpart>
        <Uber></Uber>
       <Servicces></Servicces>

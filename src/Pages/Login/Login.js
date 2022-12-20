@@ -4,12 +4,14 @@ import google from '../../images/logos/Group 571 (1).png'
 import { Link } from 'react-router-dom'
 import auth from '../../firebase.init'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import {  useNavigate } from 'react-router-dom';
+import {  useNavigate,useLocation } from 'react-router-dom';
 import Loding from '../SharedPage/Loding'
 
 const Login = () => {
   const [signInWithGoogle, user, loading, error] =useSignInWithGoogle(auth);
   const navigate =useNavigate()
+  const location =useLocation(); 
+  let from = location.state?.from?.pathname || "/";
   if (error) {
     return (
       <div>
@@ -18,13 +20,13 @@ const Login = () => {
       </div>
     );
   }
-  if (loading) {
+  if(loading) {
     return <Loding></Loding>
   }
 
 
   if(user){
-    navigate('/home')
+    navigate(from,{replace:true});
  }
 
   

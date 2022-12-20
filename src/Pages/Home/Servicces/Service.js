@@ -1,11 +1,20 @@
 import React from 'react'
 import './Service'
+import { useNavigate } from 'react-router-dom';
 function Service({service}) {
   const {name,img,id,discription}=service
-    return (
+  const navigate =useNavigate();
+  const NavigaetPurchase =(id)=>{
+     
+      navigate(`/order/${id}`)
+  }
+  
+  
+  
+  return (
      
       
-       <div className=' w-full  h-auto mt-11   pb-10 pt-4 hover:shadow-lg  '>
+       <div onClick={()=>NavigaetPurchase(id)} className=' w-full  h-auto mt-11   pb-10 pt-4 hover:shadow-lg  '>
         <div>
 
         <div className='flex justify-center'>

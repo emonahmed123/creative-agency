@@ -11,7 +11,7 @@ const Contact = () => {
                         <p className='text-sm' >Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta consectetur voluptate at autem. Dolorem recusandae architecto nam provident! Repellendus inventore ipsa</p>
                     </div>
                     <div className="w-2/3 mt-16 ml-32">
-                        <form action="">
+                        <form OnSu="">
                         <div className='grid grid-cols-1 justify-items-center gap-3'>
             <input
               type='text'

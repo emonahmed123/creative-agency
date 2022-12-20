@@ -2,10 +2,11 @@ import React from 'react'
 import logo from '../../images/logos/logo.png'
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation,Outlet } from 'react-router-dom';
 import { AiFillShopping,AiOutlinePlus,AiOutlineUserAdd,AiFillMessage,AiOutlineShoppingCart} from 'react-icons/ai'
 const DashBoard = () => {
     const [user] = useAuthState(auth);
+    const {pathname}=useLocation()
   return (
 
   <div>
@@ -19,31 +20,26 @@ const DashBoard = () => {
         </label>
       </div> 
       <div class="flex-1 px-2 mx-2 font-bold text-xl">
-        Navbar Title</div>
+         {
+          pathname.includes("servicelist")&& <h1>Service List</h1>
+         }
+         {
+          pathname.includes("addservice")&& <h1>Add Service</h1>
+         }
+         {
+          pathname.includes("ordercomfir")&& <h1>Order</h1>
+         }
+          </div>
       <div class="flex-none  lg:block">
         <ul class="menu menu-horizontal">
         
-          <li><p className='font-bold'>{user.displayName}</p></li>
+          <li><p className='font-bold'>{user?.displayName}</p></li>
           
         </ul>
       </div>
     </div>
-        <div className='bg-[#E5E5E5] md:ml-0 pl-5 h-[700px]'>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
-            <h1>this is h one</h1>
+        <div className='bg-[#DEFFED] md:ml-0 pl-5 h-[700px]'>
+        <Outlet></Outlet>
       </div>     
     
 
@@ -58,11 +54,11 @@ const DashBoard = () => {
  
     </div>
            
-      <li className='ml-10' > <a> < AiFillShopping/>Service list</a></li>
-      <li className='ml-10'><a><AiOutlinePlus/>Add Service</a></li>
+      <li className='ml-10' > <Link to='/dashboard/servicelist'> < AiFillShopping/>Service list</Link></li>
+      <li className='ml-10'><Link to='/dashboard/addservice'><AiOutlinePlus/>Add Service</Link></li>
       <li className='ml-10'><a><AiOutlineUserAdd/>Make Admin</a></li>
       
-      <li className='ml-10' > <a> <AiOutlineShoppingCart/>Order</a></li>
+      <li className='ml-10' > <Link to="/dashboard/ordercomfir"> <AiOutlineShoppingCart/>Order</Link></li>
       <li className='ml-10'><a><AiFillShopping/>Service list</a></li>
       <li className='ml-10'><a><AiFillMessage/>Review</a></li>
       
