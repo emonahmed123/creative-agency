@@ -2,8 +2,22 @@ import React from 'react'
 import './order.css'
 import {useRef} from 'react';
 import svg from '../../images/icons/cloud-upload-outline 1.svg'
+import { useParams } from 'react-router-dom';
+import { useProduct } from '../../Context/Productsprovider';
 const Orderconfim = () => {
- 
+  const{services,setService}=  useProduct()
+  
+  const {id}=useParams()
+  
+
+
+
+  const Data = services.find(course=> course?.id==id)
+  
+  console.log(Data)
+
+
+
   const inputRef = useRef(null);
 
  const handleprop = async(e)=>{
@@ -44,13 +58,21 @@ const Orderconfim = () => {
          <input  type="text"
          className='w-full max-w-[570px] py-3 pl-3 '
          placeholder='Your email address'
+        
          />
 
         </div>
         <div className='w-full max-w-[570px] mt-5 '   >
          <input  type="text"
          className='w-full max-w-[570px] py-3 pl-3 '
-         placeholder='Graphic Design'
+         placeholder=
+         {
+          
+          
+          Data?.name ? Data?.name:"CourseName"
+        
+        }
+         value={Data?.name} readOnly
          />
 
         </div>
@@ -79,10 +101,13 @@ const Orderconfim = () => {
           
            
         </div>
-          
-        <input type='submit' value="Send" className='Send mt-5 text-white'/>
+    {
+      Data ?       
+      <input type='submit' value="Send" className='Send mt-5 text-white'/>
 
-
+       : <input type='submit' value="Please Add Service" disabled className='Send mt-5 text-white'/>
+       
+    }
 
    
 

@@ -12,7 +12,7 @@ const Home=()=>{
      <div className='bg-white text-black'>
       <Fristpart></Fristpart>
        <Uber></Uber>
-      <Servicces></Servicces>
+      <Servicces ></Servicces>
        <Work></Work>
        <Clients></Clients> 
       <Contact ></Contact> 

@@ -6,7 +6,7 @@ function Service({service}) {
   const navigate =useNavigate();
   const NavigaetPurchase =(id)=>{
      
-      navigate(`/order/${id}`)
+      navigate(`/dashboard/ordercomfir/${id}`)
   }
   
   

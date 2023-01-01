@@ -20,14 +20,19 @@ const DashBoard = () => {
         </label>
       </div> 
       <div class="flex-1 px-2 mx-2 font-bold text-xl">
+        
          {
-          pathname.includes("servicelist")&& <h1>Service List</h1>
+          pathname.includes("servicelist")&& <h1>Service List</h1> 
          }
          {
           pathname.includes("addservice")&& <h1>Add Service</h1>
          }
+      
          {
           pathname.includes("ordercomfir")&& <h1>Order</h1>
+         }
+         {
+          pathname.includes("makeadmin")&& <h1>Make Admin</h1>
          }
           </div>
       <div class="flex-none  lg:block">
@@ -39,7 +44,13 @@ const DashBoard = () => {
       </div>
     </div>
         <div className='bg-[#DEFFED] md:ml-0 pl-5 h-[700px]'>
+        
+        
+        
         <Outlet></Outlet>
+      
+      
+      
       </div>     
     
 
@@ -56,7 +67,7 @@ const DashBoard = () => {
            
       <li className='ml-10' > <Link to='/dashboard/servicelist'> < AiFillShopping/>Service list</Link></li>
       <li className='ml-10'><Link to='/dashboard/addservice'><AiOutlinePlus/>Add Service</Link></li>
-      <li className='ml-10'><a><AiOutlineUserAdd/>Make Admin</a></li>
+      <li className='ml-10'><Link to="/dashboard/makeadmin"><AiOutlineUserAdd/>Make Admin</Link></li>
       
       <li className='ml-10' > <Link to="/dashboard/ordercomfir"> <AiOutlineShoppingCart/>Order</Link></li>
       <li className='ml-10'><a><AiFillShopping/>Service list</a></li>
